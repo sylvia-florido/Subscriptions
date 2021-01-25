@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TTCommons-DemiBold.ttf">
+            <string>TTCommons-DemiBold</string>
+        </array>
+        <array key="TTCommons-Medium.ttf">
+            <string>TTCommons-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SubscriptionOptionsView" customModule="Subscriptions" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="744"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalProfile" translatesAutoresizingMaskIntoConstraints="NO" id="AVx-oU-fAO">
+                    <rect key="frame" x="0.0" y="0.0" width="360" height="256"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="AVx-oU-fAO" secondAttribute="height" multiplier="45:32" id="V8f-QP-u33"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palavra do Estrategista" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbb-gM-8X1">
+                    <rect key="frame" x="20" y="81" width="248" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="248" id="Ho6-tY-gMQ"/>
+                        <constraint firstAttribute="height" constant="94" id="kjV-6b-MYM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="34"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="168" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WsI-h4-JJR">
+                    <rect key="frame" x="20" y="364" width="320" height="212"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-AX-ezv" customClass="PlanSelectorView" customModule="Subscriptions" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="152" height="212"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u7f-bk-WO0" customClass="PlanSelectorView" customModule="Subscriptions" customModuleProvider="target">
+                            <rect key="frame" x="168" y="0.0" width="152" height="212"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ideias de investimentos para sair do lugar comum, multiplicar e proteger o patrimônio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSv-ws-H3x">
+                    <rect key="frame" x="20" y="274" width="320" height="66"/>
+                    <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="22"/>
+                    <color key="textColor" name="mediumGray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r48-9y-4UF" customClass="RoundedButton" customModule="Subscriptions" customModuleProvider="target">
+                    <rect key="frame" x="20" y="592" width="320" height="48"/>
+                    <color key="backgroundColor" name="accentRed"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="803-bA-hwb"/>
+                    </constraints>
+                    <state key="normal" title="Assine agora"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="iconName" value="icon_cart"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="iconTintColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                            <real key="value" value="18"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="subscribeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="8uR-4e-0ns"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grr-hh-iKJ">
+                    <rect key="frame" x="20" y="660" width="320" height="44"/>
+                    <string key="text">Você receberá uma cobrança automática de R$ 59,90 por ano até que cancele a assinatura, o que pode ser feito a qualquer momento em “Assinaturas” no Google Play. Ao clicar em Assine agora, você aceita nossos Termos de Serviço e Políticas de Privacidade.</string>
+                    <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="customTitle"/>
+            <constraints>
+                <constraint firstItem="grr-hh-iKJ" firstAttribute="top" secondItem="r48-9y-4UF" secondAttribute="bottom" constant="20" id="74Q-uT-eaj"/>
+                <constraint firstAttribute="bottom" secondItem="grr-hh-iKJ" secondAttribute="bottom" constant="40" id="AO1-ie-bUM"/>
+                <constraint firstItem="gbb-gM-8X1" firstAttribute="centerY" secondItem="AVx-oU-fAO" secondAttribute="centerY" id="F3r-oe-537"/>
+                <constraint firstItem="grr-hh-iKJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="IZl-c5-h8f"/>
+                <constraint firstItem="gbb-gM-8X1" firstAttribute="leading" secondItem="AVx-oU-fAO" secondAttribute="leading" constant="20" id="THv-G7-8Vh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="grr-hh-iKJ" secondAttribute="trailing" constant="20" id="bL6-iE-iwH"/>
+                <constraint firstItem="r48-9y-4UF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bxK-Bf-5sI"/>
+                <constraint firstItem="WsI-h4-JJR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gGx-PZ-v8b"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WsI-h4-JJR" secondAttribute="trailing" constant="20" id="gps-rp-cOg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r48-9y-4UF" secondAttribute="trailing" constant="20" id="gvS-Ak-PH7"/>
+                <constraint firstItem="r48-9y-4UF" firstAttribute="top" secondItem="WsI-h4-JJR" secondAttribute="bottom" constant="16" id="i8T-Vx-Tqb"/>
+                <constraint firstItem="AVx-oU-fAO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ixw-jK-XsO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tSv-ws-H3x" secondAttribute="trailing" constant="20" id="k1N-jO-yPs"/>
+                <constraint firstItem="AVx-oU-fAO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qCB-VK-xvc"/>
+                <constraint firstItem="AVx-oU-fAO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qOl-X7-VSl"/>
+                <constraint firstItem="WsI-h4-JJR" firstAttribute="top" secondItem="tSv-ws-H3x" secondAttribute="bottom" constant="24" id="sCo-oI-pI4"/>
+                <constraint firstItem="tSv-ws-H3x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="wMs-eW-ugy"/>
+                <constraint firstItem="tSv-ws-H3x" firstAttribute="top" secondItem="AVx-oU-fAO" secondAttribute="bottom" constant="18" id="xE6-2l-3Sa"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomDisclaimerLabel" destination="grr-hh-iKJ" id="ggZ-py-JPp"/>
+                <outlet property="leftPlanSelector" destination="9xB-AX-ezv" id="Jp0-Pc-M0F"/>
+                <outlet property="rightPlanSelector" destination="u7f-bk-WO0" id="LfX-kD-G0h"/>
+                <outlet property="strategicAdviceLabel" destination="tSv-ws-H3x" id="snH-l6-iDb"/>
+                <outlet property="strategistImageView" destination="AVx-oU-fAO" id="DvO-8k-fvZ"/>
+            </connections>
+            <point key="canvasLocation" x="-224" y="37.781109445277366"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="r48-9y-4UF">
+            <size key="intrinsicContentSize" width="89" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="horizontalProfile" width="1080" height="640"/>
+        <namedColor name="accentRed">
+            <color red="0.9100000262260437" green="0.23899999260902405" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customTitle">
+            <color red="0.086000002920627594" green="0.097999997437000275" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mediumGray">
+            <color red="0.72200000286102295" green="0.75700002908706665" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

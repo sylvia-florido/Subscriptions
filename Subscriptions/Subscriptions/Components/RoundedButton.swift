@@ -65,7 +65,7 @@ class RoundedButton: UIButton {
         setTitleColor(.white, for: .normal)
         setTitleColor(.white, for: .highlighted)
         setTitleColor(.white, for: .disabled)
-        backgroundColor = Colors.accentMainColor
+        backgroundColor = Colors.accentRed
     }
     
     public override func prepareForInterfaceBuilder() {

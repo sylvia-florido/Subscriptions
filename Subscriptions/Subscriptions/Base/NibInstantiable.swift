@@ -27,7 +27,9 @@ public extension NibInstantiable where Self: UIViewController {
 
 public extension NibInstantiable where Self: UIView {
     static func initFromNib() -> Self {
-        guard let view =  UINib(nibName: nibName, bundle: Bundle(for: self)).instantiate(withOwner: self, options: nil).first as? Self else { fatalError("There is no xib/nib to instantiate this view, please provide one before using this func.") }
+        guard let view =  UINib(nibName: nibName, bundle: Bundle(for: self)).instantiate(withOwner: self, options: nil).first as? Self else {
+            fatalError("There is no xib/nib to instantiate this view, please provide one before using this func.")
+        }
         return view
     }
 }

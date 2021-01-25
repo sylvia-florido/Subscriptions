@@ -20,7 +20,7 @@ class SubscriptonsListViewController: BaseViewController {
     
     let rightBarButton: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage(named: "icon_search"), style: .plain, target: self, action: #selector(rightBarButtonPressed))
-        button.tintColor = Colors.navbarIcon
+        button.tintColor = Colors.mediumGray
         return button
     }()
     

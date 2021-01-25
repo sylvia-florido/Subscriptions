@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TTCommons-Medium.ttf">
+            <string>TTCommons-Medium</string>
+        </array>
+        <array key="TTCommons-Regular.ttf">
+            <string>TTCommons-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlanSelectorView" customModule="Subscriptions" customModuleProvider="target">
+            <connections>
+                <outlet property="accentTextLabel" destination="Mh9-DU-oKa" id="sOX-rF-kPi"/>
+                <outlet property="accentView" destination="wgg-kk-j5w" id="Cc1-Sw-1Dk"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="b1I-gG-6e2"/>
+                <outlet property="equalMonthlyLabel" destination="Mc7-7r-hDp" id="7Kk-Xg-Pxg"/>
+                <outlet property="periodLabel" destination="YBH-m1-emB" id="874-ZE-07J"/>
+                <outlet property="planCardView" destination="wgg-kk-j5w" id="tyb-DF-36v"/>
+                <outlet property="planNameLabel" destination="Ivm-C9-DOn" id="oGF-hd-F8g"/>
+                <outlet property="priceLabel" destination="HJW-pw-1nJ" id="N1k-N9-Rcx"/>
+                <outlet property="radioButton" destination="e2d-WK-R69" id="lgy-xS-ko5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="226"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Xz-1T-nLN">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="226"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6DO-Ij-bwW" customClass="BorderView" customModule="Subscriptions" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="186"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-kk-j5w" customClass="BorderView" customModule="Subscriptions" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="160" height="24"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50% de desconto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Mh9-DU-oKa">
+                                            <rect key="frame" x="8" y="6" width="144" height="16"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" name="accentGreen"/>
+                                    <constraints>
+                                        <constraint firstItem="Mh9-DU-oKa" firstAttribute="leading" secondItem="wgg-kk-j5w" secondAttribute="leading" constant="8" id="AQ3-gD-yNs"/>
+                                        <constraint firstAttribute="bottom" secondItem="Mh9-DU-oKa" secondAttribute="bottom" constant="2" id="Ekz-uK-Ian"/>
+                                        <constraint firstItem="Mh9-DU-oKa" firstAttribute="top" secondItem="wgg-kk-j5w" secondAttribute="top" constant="6" id="bhk-FK-rYb"/>
+                                        <constraint firstAttribute="height" constant="24" id="ebz-Pq-3hy"/>
+                                        <constraint firstAttribute="trailing" secondItem="Mh9-DU-oKa" secondAttribute="trailing" constant="8" id="mTp-BT-I5g"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="maskedCornersBitMask">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" name="accentGreen"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="F8f-5Y-xpI">
+                                    <rect key="frame" x="0.0" y="24" width="160" height="162"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MENSAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivm-C9-DOn">
+                                            <rect key="frame" x="0.0" y="8" width="160" height="34.5"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="11"/>
+                                            <color key="textColor" name="customSubtitle"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 9,99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJW-pw-1nJ">
+                                            <rect key="frame" x="0.0" y="45.5" width="160" height="34"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="22"/>
+                                            <color key="textColor" name="customTitle"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="por mês" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBH-m1-emB">
+                                            <rect key="frame" x="0.0" y="82.5" width="160" height="34.5"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="13"/>
+                                            <color key="textColor" name="customSubtitle"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(= R$ 4,99/mês)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc7-7r-hDp">
+                                            <rect key="frame" x="0.0" y="120" width="160" height="34"/>
+                                            <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="13"/>
+                                            <color key="textColor" name="customSubtitle"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="wgg-kk-j5w" firstAttribute="leading" secondItem="6DO-Ij-bwW" secondAttribute="leading" id="323-i4-vfK"/>
+                                <constraint firstItem="F8f-5Y-xpI" firstAttribute="top" secondItem="wgg-kk-j5w" secondAttribute="bottom" id="5Mm-f1-nMX"/>
+                                <constraint firstItem="wgg-kk-j5w" firstAttribute="top" secondItem="6DO-Ij-bwW" secondAttribute="top" id="788-MA-C07"/>
+                                <constraint firstAttribute="bottom" secondItem="F8f-5Y-xpI" secondAttribute="bottom" id="Asg-4w-dYC"/>
+                                <constraint firstAttribute="trailing" secondItem="F8f-5Y-xpI" secondAttribute="trailing" id="U6f-7b-mjR"/>
+                                <constraint firstAttribute="trailing" secondItem="wgg-kk-j5w" secondAttribute="trailing" id="a5t-v8-5iY"/>
+                                <constraint firstItem="F8f-5Y-xpI" firstAttribute="leading" secondItem="6DO-Ij-bwW" secondAttribute="leading" id="kvW-9a-3Zz"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="accentGreen"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2d-WK-R69">
+                            <rect key="frame" x="68" y="194" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="9fu-AX-4Nc"/>
+                                <constraint firstAttribute="width" constant="24" id="UtA-up-Krp"/>
+                            </constraints>
+                            <color key="tintColor" name="mediumGray"/>
+                            <state key="normal" image="icon_checkUnselected"/>
+                            <state key="selected" image="icon_checkSelected"/>
+                            <connections>
+                                <action selector="selectRadioButton:" destination="-1" eventType="touchUpInside" id="YIc-hY-1S7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="e2d-WK-R69" firstAttribute="top" secondItem="6DO-Ij-bwW" secondAttribute="bottom" constant="8" id="Eqj-mC-OC8"/>
+                        <constraint firstItem="e2d-WK-R69" firstAttribute="centerX" secondItem="0Xz-1T-nLN" secondAttribute="centerX" id="Hjq-Ii-7wA"/>
+                        <constraint firstItem="6DO-Ij-bwW" firstAttribute="leading" secondItem="0Xz-1T-nLN" secondAttribute="leading" id="KSR-Vm-UZX"/>
+                        <constraint firstAttribute="bottom" secondItem="e2d-WK-R69" secondAttribute="bottom" constant="8" id="Tbn-CU-v9T"/>
+                        <constraint firstAttribute="trailing" secondItem="6DO-Ij-bwW" secondAttribute="trailing" id="ba5-ax-Hlq"/>
+                        <constraint firstItem="6DO-Ij-bwW" firstAttribute="top" secondItem="0Xz-1T-nLN" secondAttribute="top" id="lhT-SP-eqT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0Xz-1T-nLN" secondAttribute="trailing" id="3DW-4s-lR4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="0Xz-1T-nLN" secondAttribute="bottom" id="8aE-ku-R7P"/>
+                <constraint firstItem="0Xz-1T-nLN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="adP-xJ-FZj"/>
+                <constraint firstItem="0Xz-1T-nLN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ivH-Qf-9bu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-89.599999999999994" y="-276.1619190404798"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_checkSelected" width="22" height="22"/>
+        <image name="icon_checkUnselected" width="22" height="22"/>
+        <namedColor name="accentGreen">
+            <color red="0.0" green="0.74900001287460327" blue="0.57300001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customSubtitle">
+            <color red="0.31000000238418579" green="0.34900000691413879" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customTitle">
+            <color red="0.086000002920627594" green="0.097999997437000275" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mediumGray">
+            <color red="0.72200000286102295" green="0.75700002908706665" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

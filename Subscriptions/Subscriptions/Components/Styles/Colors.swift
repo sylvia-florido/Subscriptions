@@ -17,12 +17,15 @@ class Colors {
     static let masterViewBackground = UIColor(named: "masterViewBackground")
     
     // B8C1C8
-    static let navbarIcon = UIColor(named: "navbarIcon")
+    static let mediumGray = UIColor(named: "mediumGray")
     
     // E83D4E
-    static public let accentMainColor = UIColor(named: "accentMainColor")
+    static public let accentRed = UIColor(named: "accentRed")
+    
+    // #00BF92
+    static public let accentGreen = UIColor(named: "accentGreen")
 
-    // 161927
+    // 161927 - also details bk
     static public let customTitle = UIColor(named: "customTitle")
     
     // 4F5963
