@@ -13,12 +13,28 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var coordinator: SubscriptionsCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let navController = UINavigationController()
+        
+        coordinator = SubscriptionsCoordinator(navigationController: navController)
+        coordinator?.start()
+        navigationAppearance()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = ViewController()
-        window!.makeKeyAndVisible()
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
         return true
+    }
+    
+    func navigationAppearance() {
+        let appearance = UINavigationBar.appearance()
+        appearance.barTintColor = Colors.darkNavBar
+        appearance.tintColor = .white
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        appearance.isTranslucent = false
     }
 
     // MARK: - Core Data stack
