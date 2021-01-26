@@ -30,9 +30,15 @@ class SubscriptionOptionsView: UIView, NibInstantiable {
         setup()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        largeAuthorImageView.applyGradient(colors: [UIColor.clear.cgColor, Colors.customTitle?.cgColor ?? UIColor.black.cgColor], locations: [0.0, 1.0], direction: .topToBottom)
+    }
+    
+    
     func setup() {
-        authorAdviceLabel.setLineSpacing(lineHeightMultiple: 1.5)
-        bottomDisclaimerLabel.setLineSpacing(lineHeightMultiple: 1.5)
+        authorAdviceLabel.setLineSpacing(lineHeightMultiple: 1.5, alignment: .center)
+        bottomDisclaimerLabel.setLineSpacing(lineHeightMultiple: 1.5, alignment: .center)       
         
         leftPlanSelector.backgroundColor = .clear
         rightPlanSelector.backgroundColor = .clear

@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -28,23 +27,23 @@
                     <rect key="frame" x="20" y="46" width="335" height="596"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="BqO-gk-F0d" userLabel="About Section">
-                            <rect key="frame" x="0.0" y="0.0" width="334.5" height="256"/>
+                            <rect key="frame" x="0.0" y="0.0" width="334.5" height="321"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre a série" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kA1-of-r3i">
-                                    <rect key="frame" x="0.0" y="0.0" width="334.5" height="22"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="334.5" height="24"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="22"/>
                                     <color key="textColor" name="customTitle"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7L-oz-Od1">
-                                    <rect key="frame" x="0.0" y="46" width="334.5" height="126"/>
+                                    <rect key="frame" x="0.0" y="48" width="334.5" height="189"/>
                                     <string key="text"> Além de pensar no que é mais lucrativo, o estrategista-chefe da Empiricus, Felipe Miranda, não se limita a levantar problemas e analisar cenários conturbados. Mas, sim, compartilha experiências e oferece soluções imediatas e oferece soluções imediatas para a construção de um patrimônio consistente.</string>
                                     <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="18"/>
                                     <color key="textColor" name="customSubtitle"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="gyF-4Q-SjR">
-                                    <rect key="frame" x="0.0" y="196" width="334.5" height="60"/>
+                                    <rect key="frame" x="0.0" y="261" width="334.5" height="60"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-4T-27j">
                                             <rect key="frame" x="0.0" y="0.0" width="334.5" height="1"/>
@@ -82,23 +81,17 @@
                                 </stackView>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BaR-DN-RNI">
-                            <rect key="frame" x="0.0" y="304" width="335" height="292"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="227" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BaR-DN-RNI">
+                            <rect key="frame" x="0.0" y="369" width="335" height="227"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que você leva" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8kR-Sn-G0a">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="22"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="26"/>
                                     <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="22"/>
                                     <color key="textColor" name="customTitle"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="185" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vpj-z4-55V">
-                                    <rect key="frame" x="0.0" y="38" width="335" height="254"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27o-Ie-iy5" customClass="SummaryView" customModule="Subscriptions" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="254"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        </view>
-                                    </subviews>
+                                    <rect key="frame" x="0.0" y="42" width="335" height="185"/>
                                     <color key="backgroundColor" name="separator"/>
                                 </stackView>
                             </subviews>
@@ -117,6 +110,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="aboutLabel" destination="F7L-oz-Od1" id="bdl-6Z-bsH"/>
+                <outlet property="authorNameLabel" destination="53U-gN-0JH" id="Kvb-kQ-gLE"/>
+                <outlet property="authorProfileImageView" destination="Pc4-Lv-gLE" id="tfi-lZ-dKM"/>
                 <outlet property="featuresSectionStackView" destination="BaR-DN-RNI" id="dpw-rW-AmB"/>
                 <outlet property="featuresStackView" destination="vpj-z4-55V" id="IwA-dC-HvK"/>
             </connections>
@@ -134,8 +129,5 @@
         <namedColor name="separator">
             <color red="0.88999998569488525" green="0.89800000190734863" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

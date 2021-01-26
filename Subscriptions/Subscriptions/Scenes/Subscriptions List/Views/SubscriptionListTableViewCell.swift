@@ -20,7 +20,7 @@ class SubscriptionListTableViewCell: UITableViewCell {
     @IBOutlet weak var aView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        descriptionLabel.setLineSpacing(lineHeightMultiple: 1.5)
+        descriptionLabel.setLineSpacing(lineHeightMultiple: 1.5, alignment: .justified)
         topView.layer.cornerRadius = 4
         topView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         bottomView.layer.cornerRadius = 4

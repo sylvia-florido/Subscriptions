@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TTCommons-Medium.ttf">
+            <string>TTCommons-Medium</string>
+        </array>
+        <array key="TTCommons-Regular.ttf">
+            <string>TTCommons-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SubscriptionsCarrosselCollectionViewCell" customModule="Subscriptions" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="236" height="278"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="236" height="278"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhH-DV-S4r" userLabel="Content View" customClass="BorderView" customModule="Subscriptions" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="236" height="278"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rX2-3E-H6Q">
+                                <rect key="frame" x="0.0" y="0.0" width="236" height="278"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="horizontalProfile" translatesAutoresizingMaskIntoConstraints="NO" id="i70-9a-bXd">
+                                        <rect key="frame" x="0.0" y="0.0" width="236" height="112"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="112" id="LQP-L0-sCE"/>
+                                            <constraint firstAttribute="width" secondItem="i70-9a-bXd" secondAttribute="height" multiplier="59:28" id="U1n-50-Nmf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1KA-ki-9DA">
+                                        <rect key="frame" x="0.0" y="132" width="236" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Os Melhores Fundos de Investimento" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnG-qB-oOa">
+                                                <rect key="frame" x="16" y="0.0" width="204" height="45.5"/>
+                                                <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="20"/>
+                                                <color key="textColor" name="customTitle"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Bruno Mérola" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecb-Be-yBr">
+                                                <rect key="frame" x="16" y="57.5" width="204" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="15"/>
+                                                <color key="textColor" name="customSubtitle"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzz-zj-FuC">
+                                        <rect key="frame" x="0.0" y="228" width="236" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6g-Mr-Hd4" customClass="RoundedButton" customModule="Subscriptions" customModuleProvider="target">
+                                                <rect key="frame" x="16" y="0.0" width="204" height="32"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="gzu-2W-a7c"/>
+                                                </constraints>
+                                                <state key="normal" title="Veja mais">
+                                                    <color key="titleColor" name="customSubtitle"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="mediumGray"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1ho-92-0ah"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="F6g-Mr-Hd4" firstAttribute="leading" secondItem="tzz-zj-FuC" secondAttribute="leading" constant="16" id="NJ2-bj-r4Q"/>
+                                            <constraint firstItem="F6g-Mr-Hd4" firstAttribute="top" secondItem="tzz-zj-FuC" secondAttribute="top" id="QT9-DT-GCW"/>
+                                            <constraint firstAttribute="bottom" secondItem="F6g-Mr-Hd4" secondAttribute="bottom" constant="18" id="uIP-O0-lsg"/>
+                                            <constraint firstAttribute="trailing" secondItem="F6g-Mr-Hd4" secondAttribute="trailing" constant="16" id="x1W-8n-5e5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rX2-3E-H6Q" secondAttribute="trailing" id="Snq-ec-ZoT"/>
+                            <constraint firstItem="rX2-3E-H6Q" firstAttribute="leading" secondItem="WhH-DV-S4r" secondAttribute="leading" id="an9-c2-PlX"/>
+                            <constraint firstItem="rX2-3E-H6Q" firstAttribute="top" secondItem="WhH-DV-S4r" secondAttribute="top" id="bOP-Qd-QeF"/>
+                            <constraint firstAttribute="bottom" secondItem="rX2-3E-H6Q" secondAttribute="bottom" id="whk-5r-Q4d"/>
+                        </constraints>
+                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="WhH-DV-S4r" secondAttribute="bottom" id="1y9-8P-DyP"/>
+                <constraint firstItem="WhH-DV-S4r" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="GWO-x8-ZSN"/>
+                <constraint firstAttribute="trailing" secondItem="WhH-DV-S4r" secondAttribute="trailing" id="P4K-DG-mdz"/>
+                <constraint firstItem="WhH-DV-S4r" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="psO-bl-UHd"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="i70-9a-bXd" id="cK3-KV-m1x"/>
+                <outlet property="subtitleLabel" destination="Ecb-Be-yBr" id="VO1-fR-wJX"/>
+                <outlet property="titleLabel" destination="xnG-qB-oOa" id="S9N-j9-V2H"/>
+            </connections>
+            <point key="canvasLocation" x="29" y="-60"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="F6g-Mr-Hd4">
+            <size key="intrinsicContentSize" width="49" height="25"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="horizontalProfile" width="1080" height="640"/>
+        <namedColor name="customSubtitle">
+            <color red="0.31000000238418579" green="0.34900000691413879" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="customTitle">
+            <color red="0.086000002920627594" green="0.097999997437000275" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mediumGray">
+            <color red="0.72200000286102295" green="0.75700002908706665" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

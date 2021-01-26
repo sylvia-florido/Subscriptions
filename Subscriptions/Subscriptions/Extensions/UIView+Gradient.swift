@@ -17,7 +17,7 @@ extension UIView {
         case rightToLeft
     }
     
-    func applyGradient(colors: [Any]?, locations: [NSNumber]? = [0.0, 1.0], direction: Direction = .topToBottom) {
+    func applyGradient(colors: [CGColor]?, locations: [NSNumber]? = [0.0, 1.0], direction: Direction = .topToBottom) {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.bounds
@@ -45,6 +45,3 @@ extension UIView {
         self.layer.addSublayer(gradientLayer)
     }
 }
-//self.view.applyGradient(colors: [UIColor.red.cgColor, UIColor.blue.cgColor],
-//                                locations: [0.0, 1.0],
-//                                direction: .topToBottom)

@@ -27,7 +27,7 @@ class SubscriptionsCoordinator: SubscriptionsCoordinatorProtocol {
     }
     
     func showListScene() {
-        let controller = SubscriptonsListViewController()
+        let controller = SubscriptionDetailsViewController()
 //        let presenter = HomePresenter(with: controller)
 //        let interactor = HomeInteractor(with: presenter, repository: repository)
 //        controller.interactor = interactor

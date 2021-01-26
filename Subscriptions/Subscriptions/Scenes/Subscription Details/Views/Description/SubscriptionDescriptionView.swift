@@ -25,6 +25,7 @@ class SubscriptionDescriptionView: UIView, NibInstantiable {
     
     func setup() {
         aboutLabel.setLineSpacing(lineHeightMultiple: 1.4)
+        authorProfileImageView.layer.cornerRadius = authorProfileImageView.frame.height/2
     }
     
     func update(with viewModel: SubscriptionDescriptionViewModel) {

@@ -23,6 +23,19 @@ class RoundedButton: UIButton {
         }
     }
     
+    // MARK: - Border
+    @IBInspectable public var borderColor: UIColor = .clear {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    @IBInspectable public var borderWidth: CGFloat = 0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
     // MARK: - Icon
     @IBInspectable public var iconTintColor: UIColor = .white {
         didSet {
@@ -38,12 +51,7 @@ class RoundedButton: UIButton {
             setImage(image, for: .normal)
         }
     }
-    
-    public var externalImage: UIImage? {
-        didSet {
-            setImage(externalImage, for: .normal)
-        }
-    }
+
     
     // MARK: - Init / Setup
     override init(frame: CGRect) {
@@ -65,7 +73,6 @@ class RoundedButton: UIButton {
         setTitleColor(.white, for: .normal)
         setTitleColor(.white, for: .highlighted)
         setTitleColor(.white, for: .disabled)
-        backgroundColor = Colors.accentRed
     }
     
     public override func prepareForInterfaceBuilder() {

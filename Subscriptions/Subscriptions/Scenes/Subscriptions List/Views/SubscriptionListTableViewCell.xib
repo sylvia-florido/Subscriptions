@@ -129,7 +129,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="aView" destination="DzU-nI-lX6" id="6fB-bA-OBK"/>
                 <outlet property="bottomView" destination="9A3-sI-VjN" id="GAb-zY-f0G"/>
                 <outlet property="descriptionLabel" destination="cM6-hX-jzY" id="ObW-JS-Bko"/>
                 <outlet property="leftImageView" destination="SkL-x6-VNz" id="Ds3-Z1-uyy"/>
