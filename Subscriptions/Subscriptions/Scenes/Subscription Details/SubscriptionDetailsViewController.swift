@@ -19,11 +19,12 @@ class SubscriptionDetailsViewController: UIViewController {
         
         let test = SubscriptionOptionsView.initFromNib()
         test.delegate = self
-        let test1 = SubscriptionOptionsView.initFromNib()
-        contentStackView.addArrangedSubview(test)
+        let test1 = SubscriptionDescriptionView.initFromNib()
+        let test2 = SubscriptionsCarrosselView.initFromNib()
         
+        contentStackView.addArrangedSubview(test)
         contentStackView.addArrangedSubview(test1)
-        print("")
+        contentStackView.addArrangedSubview(test2)
     }
     
     override func viewWillAppear(_ animated: Bool) {
