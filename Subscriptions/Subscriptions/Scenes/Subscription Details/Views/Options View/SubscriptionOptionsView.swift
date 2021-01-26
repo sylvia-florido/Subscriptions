@@ -15,8 +15,8 @@ protocol SubscriptionOptionsViewDelegate: class {
 
 class SubscriptionOptionsView: UIView, NibInstantiable {
     
-    @IBOutlet weak var strategistImageView: UIImageView!
-    @IBOutlet weak var strategicAdviceLabel: UILabel!
+    @IBOutlet weak var largeAuthorImageView: UIImageView!
+    @IBOutlet weak var authorAdviceLabel: UILabel!
     @IBOutlet weak var bottomDisclaimerLabel: UILabel!
     
     @IBOutlet weak var leftPlanSelector: PlanSelectorView!
@@ -24,13 +24,14 @@ class SubscriptionOptionsView: UIView, NibInstantiable {
 
     weak var delegate: SubscriptionOptionsViewDelegate?
     
+    //MARK: - Lifecycle & Setup
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
     }
     
     func setup() {
-        strategicAdviceLabel.setLineSpacing(lineHeightMultiple: 1.5)
+        authorAdviceLabel.setLineSpacing(lineHeightMultiple: 1.5)
         bottomDisclaimerLabel.setLineSpacing(lineHeightMultiple: 1.5)
         
         leftPlanSelector.backgroundColor = .clear
@@ -40,9 +41,10 @@ class SubscriptionOptionsView: UIView, NibInstantiable {
         rightPlanSelector.radioButtonAction = rightPlanSelectionAction
     }
     
+    //MARK: - Update display
     func update(with viewModel: SubscriptionOptionsViewModel) {
-        strategistImageView.image = viewModel.strategistImage
-        strategicAdviceLabel.text = viewModel.strategistAdvice
+        largeAuthorImageView.image = viewModel.strategistImage
+        authorAdviceLabel.text = viewModel.strategistAdvice
         bottomDisclaimerLabel.text = viewModel.disclaimer
         leftPlanSelector.update(with: viewModel.leftPlanViewModel)
         rightPlanSelector.update(with: viewModel.rightPlanViewModel)
@@ -57,7 +59,7 @@ class SubscriptionOptionsView: UIView, NibInstantiable {
         }
     }
     
-    
+    // MARK: - Actions
     private func leftPlanSelectionAction() {
         delegate?.didSelectPlan(option: .left)
     }

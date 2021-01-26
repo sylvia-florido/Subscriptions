@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="335" placeholderIntrinsicHeight="168" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WsI-h4-JJR">
-                    <rect key="frame" x="20" y="364" width="320" height="212"/>
+                    <rect key="frame" x="20" y="375" width="320" height="212"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-AX-ezv" customClass="PlanSelectorView" customModule="Subscriptions" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="152" height="212"/>
@@ -54,13 +54,13 @@
                     </subviews>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ideias de investimentos para sair do lugar comum, multiplicar e proteger o patrimônio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSv-ws-H3x">
-                    <rect key="frame" x="20" y="274" width="320" height="66"/>
+                    <rect key="frame" x="20" y="274" width="320" height="77"/>
                     <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="22"/>
                     <color key="textColor" name="mediumGray"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r48-9y-4UF" customClass="RoundedButton" customModule="Subscriptions" customModuleProvider="target">
-                    <rect key="frame" x="20" y="592" width="320" height="48"/>
+                    <rect key="frame" x="20" y="603" width="320" height="48"/>
                     <color key="backgroundColor" name="accentRed"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="803-bA-hwb"/>
@@ -83,7 +83,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grr-hh-iKJ">
-                    <rect key="frame" x="20" y="660" width="320" height="44"/>
+                    <rect key="frame" x="20" y="671" width="320" height="33"/>
                     <string key="text">Você receberá uma cobrança automática de R$ 59,90 por ano até que cancele a assinatura, o que pode ser feito a qualquer momento em “Assinaturas” no Google Play. Ao clicar em Assine agora, você aceita nossos Termos de Serviço e Políticas de Privacidade.</string>
                     <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="11"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,18 +114,18 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="authorAdviceLabel" destination="tSv-ws-H3x" id="snH-l6-iDb"/>
                 <outlet property="bottomDisclaimerLabel" destination="grr-hh-iKJ" id="ggZ-py-JPp"/>
+                <outlet property="largeAuthorImageView" destination="AVx-oU-fAO" id="DvO-8k-fvZ"/>
                 <outlet property="leftPlanSelector" destination="9xB-AX-ezv" id="Jp0-Pc-M0F"/>
                 <outlet property="rightPlanSelector" destination="u7f-bk-WO0" id="LfX-kD-G0h"/>
-                <outlet property="strategicAdviceLabel" destination="tSv-ws-H3x" id="snH-l6-iDb"/>
-                <outlet property="strategistImageView" destination="AVx-oU-fAO" id="DvO-8k-fvZ"/>
             </connections>
             <point key="canvasLocation" x="-224" y="37.781109445277366"/>
         </view>
     </objects>
     <designables>
         <designable name="r48-9y-4UF">
-            <size key="intrinsicContentSize" width="89" height="30"/>
+            <size key="intrinsicContentSize" width="108" height="18"/>
         </designable>
     </designables>
     <resources>
