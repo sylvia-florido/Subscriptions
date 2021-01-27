@@ -11,6 +11,8 @@ import UIKit
 class SubscriptionDetailsViewController: UIViewController {
     @IBOutlet weak var contentStackView: UIStackView!
     
+    var subscription: SubscriptionDetails?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail"

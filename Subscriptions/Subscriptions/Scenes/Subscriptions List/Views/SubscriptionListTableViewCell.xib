@@ -33,7 +33,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzU-nI-lX6">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="208"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SkL-x6-VNz">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SkL-x6-VNz">
                                         <rect key="frame" x="0.0" y="0.0" width="96" height="208"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="208" id="6aD-GP-m7b"/>
@@ -44,24 +44,24 @@
                                         <rect key="frame" x="112" y="24" width="232" height="168"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="33S-6r-GC3">
-                                                <rect key="frame" x="0.0" y="0.0" width="232" height="73"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="232" height="81.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Os Melhores Fundos de Investimento" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGf-jf-ZuN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="47.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="232" height="56"/>
                                                         <fontDescription key="fontDescription" name="TTCommons-Medium" family="TT Commons" pointSize="20"/>
                                                         <color key="textColor" name="customTitle"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Bruno Mérola" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlJ-pf-TJk">
-                                                        <rect key="frame" x="0.0" y="55.5" width="232" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="64" width="232" height="17.5"/>
                                                         <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="15"/>
                                                         <color key="textColor" name="customSubtitle"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="A melhor seleção de fundos de investimento, desde a renda fixa até a variável. Entenda como funciona alguma coisa que " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-hX-jzY">
-                                                <rect key="frame" x="0.0" y="97" width="232" height="71"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="A melhor seleção de fundos de investimento, desde a renda fixa até a variável. Entenda como funciona alguma coisa que " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-hX-jzY">
+                                                <rect key="frame" x="0.0" y="105.5" width="232" height="62.5"/>
                                                 <fontDescription key="fontDescription" name="TTCommons-Regular" family="TT Commons" pointSize="15"/>
                                                 <color key="textColor" name="customSubtitle"/>
                                                 <nil key="highlightedColor"/>
@@ -92,6 +92,7 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-wA-KhK" customClass="RoundedButton" customModule="Subscriptions" customModuleProvider="target">
                                         <rect key="frame" x="16" y="16" width="328" height="40"/>
+                                        <color key="backgroundColor" name="accentRed"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="o3W-qT-yts"/>
                                         </constraints>
@@ -101,6 +102,9 @@
                                                 <real key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buttonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WHH-70-lyQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -141,10 +145,13 @@
     </objects>
     <designables>
         <designable name="EgU-wA-KhK">
-            <size key="intrinsicContentSize" width="65" height="30"/>
+            <size key="intrinsicContentSize" width="52" height="26"/>
         </designable>
     </designables>
     <resources>
+        <namedColor name="accentRed">
+            <color red="0.9100000262260437" green="0.23899999260902405" blue="0.3059999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="customSubtitle">
             <color red="0.31000000238418579" green="0.34900000691413879" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

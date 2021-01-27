@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import UIKit
+
+public typealias GenericError = ((_ errorMessage: String) -> Void)
 
 enum SubscriptionsServiceErrors: String {
     case parseToModel = "Couldn't parse response to model."
@@ -30,18 +33,27 @@ class SubscriptionsRepository {
     }
     
     // MARK: API calls
-    func getSubscriptionsList(_ completionHandler: @escaping (_ response: [SubscriptionDetails]?, _ error: NSError?) -> Void) {
+    func getSubscriptionsList(success: @escaping ((_ response: [SubscriptionDetails]) -> Void),
+                              failure: @escaping GenericError) {
         
         let request = SubscriptionsRequest()
         BaseRequester().taskForGETMethod(request: request, responseType: SubscriptionResponse.self) { (response, error) in
             if let response = response {
                 let details = response.groups
-                completionHandler(details, nil)
+                success(details)
             } else {
-                completionHandler(nil, error)
+                failure("Parse error")
             }
         }
-        
+    }
+    
+    // MARK: - Images
+    func getImage(withURL url:URL, completion: @escaping (_ image: UIImage?)->()) {
+        BaseRequester.getImage(withURL: url, completion: completion)
+    }
+    
+    func cacheImage(withURL url:URL, completion: @escaping (_ success: Bool)->()) {
+        BaseRequester.cacheImage(withURL: url, completion: completion)
     }
     
 }

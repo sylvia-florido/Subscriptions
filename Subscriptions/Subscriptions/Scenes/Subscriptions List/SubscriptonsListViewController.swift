@@ -12,6 +12,14 @@ class SubscriptonsListViewController: BaseViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var coordinator: SubscriptionsCoordinator?
+    var repository: SubscriptionsRepository?
+    var subscriptions: [SubscriptionDetails] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     let leftBarButton: UIBarButtonItem = {
         let button = UIBarButtonItem(title: SubscriptionsListStrings.leftButtonTitle, style: .plain, target: self, action: #selector(leftBarButtonPressed))
         button.setTitleTextAttributes([NSAttributedString.Key.font:  UIFont(name: "TTCommons-Medium", size: 20) ?? UIFont.systemFont(ofSize: 16, weight: .semibold)], for: UIControl.State.normal)
@@ -24,10 +32,12 @@ class SubscriptonsListViewController: BaseViewController {
         return button
     }()
     
+    // MARK: - Lifecycle & Setup
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationBar()
         setupTableView()
+        fetchData()
     }
     
     override func configureNavigationBar() {
@@ -36,7 +46,7 @@ class SubscriptonsListViewController: BaseViewController {
         navigationItem.rightBarButtonItem = rightBarButton
     }
     
-    fileprivate func setupTableView() {
+    private func setupTableView() {
         tableView.bounces = false
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
@@ -46,6 +56,23 @@ class SubscriptonsListViewController: BaseViewController {
         tableView.registerCell(SubscriptionListTableViewCell.self)
     }
     
+    // MARK: - Service Integration
+    private func fetchData() {
+        repository?.getSubscriptionsList(success: { [weak self] (subscriptionDetails) in
+            self?.subscriptions = subscriptionDetails
+        }, failure: { (errorMessage) in
+            UIAlertController.show(from: self, title: "Erro de conexão", message: "Desculpe, não conseguimos encontrar assinaturas nessa momento. Tente novamente mais tarde.", preferredButtonTitle: "Entendi", handler: nil)
+        })
+    }
+    private func fetchImageForSideBackground(for subscription: SubscriptionDetails, completion: @escaping (_ image: UIImage?)->()) {
+        if let url = URL(string: subscription.backgroundSmall) {
+            repository?.getImage(withURL: url, completion: { (image) in
+                completion(image)
+            })
+        }
+    }
+    
+    // MARK: - Actions
     @objc func leftBarButtonPressed(_ sender: Any?) {
     }
     
@@ -56,16 +83,30 @@ class SubscriptonsListViewController: BaseViewController {
 
 extension SubscriptonsListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        subscriptions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cellViewModel = viewModel[indexPath.row]
+        let model = subscriptions[indexPath.row]
+
+        let viewModel = SubscriptionsListViewModel(with: model)
         let cell = tableView.dequeueCell(SubscriptionListTableViewCell.self, indexPath: indexPath)
-//        cell.configWith(viewModel: cellViewModel)
-//        cell.delegate = self
+        cell.configure(with: viewModel)
+        cell.delegate = self
+        let image = fetchImageForSideBackground(for: model) { (image) in
+            cell.leftImageView?.image = image
+        }
         return cell
     }
     
-    
+}
+
+extension SubscriptonsListViewController: SubscriptionListTableViewCellDelegate {
+    func didPressButton(in cell: UITableViewCell) {
+        guard let index = tableView.indexPath(for: cell)?.row else {
+            return
+        }
+        let subscriptionSelected = subscriptions[index]
+        coordinator?.showDetailsScene(with: subscriptionSelected)
+    }
 }
