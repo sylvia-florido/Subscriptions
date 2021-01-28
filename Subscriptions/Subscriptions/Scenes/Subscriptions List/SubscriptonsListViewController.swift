@@ -88,14 +88,10 @@ class SubscriptonsListViewController: BaseViewController {
     
     // MARK: - Actions
     @objc func leftBarButtonPressed(_ sender: Any?) {
-        // Ofertas
-        print("OFertas")
+        UIAlertController.show(from: self, title: "Ofertas", message: "Você clocou no botão Ofertas", preferredButtonTitle: "Ok", handler: nil)
     }
     
     @objc func rightBarButtonPressed(_ sender: Any?) {
-        // Search
-        print("Seacrh")
-        
         showSearchBar(searchBar: searchController.searchBar)
     }
     
@@ -143,7 +139,7 @@ extension SubscriptonsListViewController: SubscriptionListTableViewCellDelegate 
         guard let index = tableView.indexPath(for: cell)?.row else {
             return
         }
-        let subscriptionSelected = subscriptions[index]
+        let subscriptionSelected = filteredResults[index]
         coordinator?.showDetailsScene(with: subscriptionSelected, subscriptionsList: subscriptions)
     }
 }
@@ -161,7 +157,6 @@ extension SubscriptonsListViewController: UISearchResultsUpdating, UISearchBarDe
         filteredResults = subscriptions.filter { (viewModel) -> Bool in
             return viewModel.name.lowercased().contains(searchText.lowercased())
         }
-//        listView.viewModel = filteredResults
     }
     
     //MARK: UISearchBarDelegate
