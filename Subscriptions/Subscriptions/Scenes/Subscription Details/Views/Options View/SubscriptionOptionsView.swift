@@ -16,12 +16,13 @@ protocol SubscriptionOptionsViewDelegate: class {
 class SubscriptionOptionsView: UIView, NibInstantiable {
     
     @IBOutlet weak var largeAuthorImageView: UIImageView!
+    @IBOutlet weak var subscriptionNameLabel: UILabel!
     @IBOutlet weak var authorAdviceLabel: UILabel!
     @IBOutlet weak var bottomDisclaimerLabel: UILabel!
-    
     @IBOutlet weak var leftPlanSelector: PlanSelectorView!
     @IBOutlet weak var rightPlanSelector: PlanSelectorView!
 
+    var repository: SubscriptionsRepository?
     weak var delegate: SubscriptionOptionsViewDelegate?
     
     //MARK: - Lifecycle & Setup
@@ -49,20 +50,27 @@ class SubscriptionOptionsView: UIView, NibInstantiable {
     
     //MARK: - Update display
     func update(with viewModel: SubscriptionOptionsViewModel) {
+        subscriptionNameLabel.text = viewModel.subscriptionName
         largeAuthorImageView.image = viewModel.strategistImage
         authorAdviceLabel.text = viewModel.strategistAdvice
         bottomDisclaimerLabel.text = viewModel.disclaimer
         leftPlanSelector.update(with: viewModel.leftPlanViewModel)
         rightPlanSelector.update(with: viewModel.rightPlanViewModel)
+        repository?.getImage(with: viewModel.largeBackgroundUrlString, completion: { [weak self] (image) in
+            if let image = image {
+                self?.updateImage(with: image)
+            }
+        })
     }
     
-    func updatePlanSelector(option: PlanOption, with viewModel: PlanSelectorViewModel) {
-        switch option {
-        case .left:
-            leftPlanSelector.update(with: viewModel)
-        case .right:
-            rightPlanSelector.update(with: viewModel)
-        }
+    func updateImage(with image: UIImage) {
+        largeAuthorImageView.image = image
+    }
+    
+    func toggleSelectedPlan(option: PlanOption) {
+        leftPlanSelector.setSelected(option == .left)
+        rightPlanSelector.setSelected(option == .right)
+
     }
     
     // MARK: - Actions

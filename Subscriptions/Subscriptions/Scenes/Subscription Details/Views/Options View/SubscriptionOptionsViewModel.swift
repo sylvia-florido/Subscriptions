@@ -9,9 +9,11 @@
 import UIKit
 
 struct SubscriptionOptionsViewModel {
-    let strategistImage: UIImage
-    let strategistAdvice: String
-    let disclaimer: String
+    let subscriptionName: String
+    let largeBackgroundUrlString: String?
+    let strategistImage: UIImage?
+    let strategistAdvice: String?
+    let disclaimer: String?
     let leftPlanViewModel: PlanSelectorViewModel
     let rightPlanViewModel: PlanSelectorViewModel
 }

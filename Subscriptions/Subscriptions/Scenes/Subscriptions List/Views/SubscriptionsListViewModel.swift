@@ -12,10 +12,12 @@ struct SubscriptionsListViewModel {
     let title: String
     let subtitle: String
     let descritionText: String
+    let imageUrl: String
     
     init(with model: SubscriptionDetails) {
         title = model.name
         subtitle = model.authors.first?.name ?? ""
         descritionText = model.longDescription
+        imageUrl = model.backgroundSmall
     }
 }

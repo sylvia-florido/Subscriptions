@@ -41,6 +41,7 @@ class PlanSelectorView: UIView {
         nib.instantiate(withOwner: self, options: nil)
         contentView.frame = bounds
         addSubview(contentView)
+        planCardView.apply(borderStyle: .mediumGray)
     }
     
     func update(with viewModel: PlanSelectorViewModel) {
@@ -53,13 +54,14 @@ class PlanSelectorView: UIView {
         setSelected(viewModel.selected)
     }
     
-    private func setSelected(_ selected: Bool) {
+    func setSelected(_ selected: Bool) {
         guard let accentColor = selected == true ? Colors.accentGreen  : Colors.mediumGray else { return }
         
         accentView.backgroundColor = accentColor
         accentView.borderColor = accentColor
         planCardView.borderColor = accentColor
         radioButton.tintColor = accentColor
+        radioButton.isSelected = selected
     }
     
     @IBAction func selectRadioButton(_ sender: UIButton) {

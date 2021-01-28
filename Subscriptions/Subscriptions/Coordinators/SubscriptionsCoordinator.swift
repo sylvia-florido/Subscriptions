@@ -33,11 +33,14 @@ class SubscriptionsCoordinator: SubscriptionsCoordinatorProtocol {
         navigationController.pushViewController(controller, animated: true)
     }
     
-    func showDetailsScene(with subscriptionDetails: SubscriptionDetails) {
+    func showDetailsScene(with subscriptionDetails: SubscriptionDetails, subscriptionsList: [SubscriptionDetails]) {
         let controller = SubscriptionDetailsViewController()
+        controller.repository = repository
         controller.subscription = subscriptionDetails
+        controller.subscriptionsList = subscriptionsList
         navigationController.pushViewController(controller, animated: true)
     }
+
     
     func vipCleanArchitectureExample() {
 //        let controller = HomeViewController()

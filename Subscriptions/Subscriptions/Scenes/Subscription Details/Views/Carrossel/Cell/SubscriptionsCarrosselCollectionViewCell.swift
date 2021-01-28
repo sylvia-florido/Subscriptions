@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SubscriptionsCarrosselCellDelegate: class {
-    func didPressCarrosselCellButton()
+    func didPressCarrosselCellButton(_ cell: SubscriptionsCarrosselCollectionViewCell)
 }
 
 class SubscriptionsCarrosselCollectionViewCell: UICollectionViewCell {
@@ -41,12 +41,15 @@ class SubscriptionsCarrosselCollectionViewCell: UICollectionViewCell {
     }
     
     func update(with viewModel: SubscriptionsCarrosselViewModel) {
-        imageView.image = viewModel.image
         titleLabel.text = viewModel.title
         subtitleLabel.text = viewModel.subtitle
     }
     
+    func updateImage(with image: UIImage) {
+        imageView.image = image
+    }
+    
     @IBAction func buttonPressed(_ sender: UIButton) {
-        delegate?.didPressCarrosselCellButton()
+        delegate?.didPressCarrosselCellButton(self)
     }
 }

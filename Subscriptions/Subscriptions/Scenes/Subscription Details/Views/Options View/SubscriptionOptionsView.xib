@@ -31,10 +31,9 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Palavra do Estrategista" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbb-gM-8X1">
-                    <rect key="frame" x="20" y="81" width="248" height="94"/>
+                    <rect key="frame" x="20" y="88.5" width="248" height="79.5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="248" id="Ho6-tY-gMQ"/>
-                        <constraint firstAttribute="height" constant="94" id="kjV-6b-MYM"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="TTCommons-DemiBold" family="TT Commons" pointSize="34"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,6 +99,7 @@
                 <constraint firstItem="gbb-gM-8X1" firstAttribute="leading" secondItem="AVx-oU-fAO" secondAttribute="leading" constant="20" id="THv-G7-8Vh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="grr-hh-iKJ" secondAttribute="trailing" constant="20" id="bL6-iE-iwH"/>
                 <constraint firstItem="r48-9y-4UF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="bxK-Bf-5sI"/>
+                <constraint firstItem="gbb-gM-8X1" firstAttribute="height" relation="lessThanOrEqual" secondItem="AVx-oU-fAO" secondAttribute="height" id="cnK-bQ-Zc0"/>
                 <constraint firstItem="WsI-h4-JJR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gGx-PZ-v8b"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WsI-h4-JJR" secondAttribute="trailing" constant="20" id="gps-rp-cOg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="r48-9y-4UF" secondAttribute="trailing" constant="20" id="gvS-Ak-PH7"/>
@@ -119,6 +119,7 @@
                 <outlet property="largeAuthorImageView" destination="AVx-oU-fAO" id="DvO-8k-fvZ"/>
                 <outlet property="leftPlanSelector" destination="9xB-AX-ezv" id="Jp0-Pc-M0F"/>
                 <outlet property="rightPlanSelector" destination="u7f-bk-WO0" id="LfX-kD-G0h"/>
+                <outlet property="subscriptionNameLabel" destination="gbb-gM-8X1" id="oV7-VB-jwP"/>
             </connections>
             <point key="canvasLocation" x="-224" y="37.781109445277366"/>
         </view>

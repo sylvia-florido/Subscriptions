@@ -16,7 +16,8 @@ extension UIAlertController {
                     additionalButtonTitle: String? = nil,
                     additionalHandler: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let preferredAction = UIAlertAction(title: title, style: .default, handler: handler)
+        let preferredAction = UIAlertAction(title: preferredButtonTitle, style: .default, handler: handler)
+        alert.view.tintColor = Colors.accentGreen
         alert.addAction(preferredAction)
         alert.preferredAction = preferredAction
         if let buttonTitle = additionalButtonTitle {

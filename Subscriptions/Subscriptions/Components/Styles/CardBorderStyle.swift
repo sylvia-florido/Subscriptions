@@ -22,6 +22,6 @@ public class CardBorderStyle: NSObject {
     public static var none    = CardBorderStyle(width: 0.0, color: nil)
     public static var thinGreen    = CardBorderStyle(width: 1.0, color: Colors.accentGreen)
     public static var mediumGreen  = CardBorderStyle(width: 2.0, color: Colors.accentGreen)
-    public static var thinGray    = CardBorderStyle(width: 1.0, color: Colors.accentGreen)
-    public static var mediumGray  = CardBorderStyle(width: 2.0, color: Colors.accentGreen)
+    public static var thinGray    = CardBorderStyle(width: 1.0, color: Colors.mediumGray)
+    public static var mediumGray  = CardBorderStyle(width: 2.0, color: Colors.mediumGray)
 }

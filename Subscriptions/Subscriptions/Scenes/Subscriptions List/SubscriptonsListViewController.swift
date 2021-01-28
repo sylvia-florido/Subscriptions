@@ -85,13 +85,6 @@ class SubscriptonsListViewController: BaseViewController {
             UIAlertController.show(from: self, title: "Erro de conexão", message: "Desculpe, não conseguimos encontrar assinaturas nessa momento. Tente novamente mais tarde.", preferredButtonTitle: "Entendi", handler: nil)
         })
     }
-    private func fetchImageForSideBackground(for subscription: SubscriptionDetails, completion: @escaping (_ image: UIImage?)->()) {
-        if let url = URL(string: subscription.backgroundSmall) {
-            repository?.getImage(withURL: url, completion: { (image) in
-                completion(image)
-            })
-        }
-    }
     
     // MARK: - Actions
     @objc func leftBarButtonPressed(_ sender: Any?) {
@@ -137,9 +130,9 @@ extension SubscriptonsListViewController: UITableViewDataSource, UITableViewDele
         let cell = tableView.dequeueCell(SubscriptionListTableViewCell.self, indexPath: indexPath)
         cell.configure(with: viewModel)
         cell.delegate = self
-        fetchImageForSideBackground(for: model) { (image) in
+        repository?.getImage(with: viewModel.imageUrl, completion: { (image) in
             cell.leftImageView?.image = image
-        }
+        })
         return cell
     }
     

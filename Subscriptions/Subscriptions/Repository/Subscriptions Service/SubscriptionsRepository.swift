@@ -47,9 +47,19 @@ class SubscriptionsRepository {
         }
     }
     
+    
     // MARK: - Images
     func getImage(withURL url:URL, completion: @escaping (_ image: UIImage?)->()) {
         BaseRequester.getImage(withURL: url, completion: completion)
+    }
+    
+    func getImage(with urlString: String?, completion: @escaping (_ image:UIImage?)->()) {
+        guard let urlString = urlString,
+              let url = URL(string: urlString) else {
+            completion(nil)
+            return
+        }
+        getImage(withURL: url, completion: completion)
     }
     
     func cacheImage(withURL url:URL, completion: @escaping (_ success: Bool)->()) {

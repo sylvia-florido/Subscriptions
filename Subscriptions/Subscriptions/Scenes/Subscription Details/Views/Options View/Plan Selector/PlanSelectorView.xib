@@ -25,7 +25,7 @@
                 <outlet property="contentView" destination="iN0-l3-epB" id="b1I-gG-6e2"/>
                 <outlet property="equalMonthlyLabel" destination="Mc7-7r-hDp" id="7Kk-Xg-Pxg"/>
                 <outlet property="periodLabel" destination="YBH-m1-emB" id="874-ZE-07J"/>
-                <outlet property="planCardView" destination="wgg-kk-j5w" id="tyb-DF-36v"/>
+                <outlet property="planCardView" destination="6DO-Ij-bwW" id="Mnk-7w-mb8"/>
                 <outlet property="planNameLabel" destination="Ivm-C9-DOn" id="oGF-hd-F8g"/>
                 <outlet property="priceLabel" destination="HJW-pw-1nJ" id="N1k-N9-Rcx"/>
                 <outlet property="radioButton" destination="e2d-WK-R69" id="lgy-xS-ko5"/>
@@ -52,7 +52,6 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" name="accentGreen"/>
                                     <constraints>
                                         <constraint firstItem="Mh9-DU-oKa" firstAttribute="leading" secondItem="wgg-kk-j5w" secondAttribute="leading" constant="8" id="AQ3-gD-yNs"/>
                                         <constraint firstAttribute="bottom" secondItem="Mh9-DU-oKa" secondAttribute="bottom" constant="2" id="Ekz-uK-Ian"/>
@@ -66,9 +65,6 @@
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="maskedCornersBitMask">
                                             <integer key="value" value="3"/>
-                                        </userDefinedRuntimeAttribute>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                            <color key="value" name="accentGreen"/>
                                         </userDefinedRuntimeAttribute>
                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                             <real key="value" value="0.0"/>
@@ -117,9 +113,6 @@
                                 <constraint firstItem="F8f-5Y-xpI" firstAttribute="leading" secondItem="6DO-Ij-bwW" secondAttribute="leading" id="kvW-9a-3Zz"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                    <color key="value" name="accentGreen"/>
-                                </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                     <real key="value" value="2"/>
                                 </userDefinedRuntimeAttribute>
@@ -134,7 +127,6 @@
                                 <constraint firstAttribute="height" constant="24" id="9fu-AX-4Nc"/>
                                 <constraint firstAttribute="width" constant="24" id="UtA-up-Krp"/>
                             </constraints>
-                            <color key="tintColor" name="mediumGray"/>
                             <state key="normal" image="icon_checkUnselected"/>
                             <state key="selected" image="icon_checkSelected"/>
                             <connections>
@@ -168,17 +160,11 @@
     <resources>
         <image name="icon_checkSelected" width="22" height="22"/>
         <image name="icon_checkUnselected" width="22" height="22"/>
-        <namedColor name="accentGreen">
-            <color red="0.0" green="0.74900001287460327" blue="0.57300001382827759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="customSubtitle">
             <color red="0.31000000238418579" green="0.34900000691413879" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="customTitle">
             <color red="0.086000002920627594" green="0.097999997437000275" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="mediumGray">
-            <color red="0.72200000286102295" green="0.75700002908706665" blue="0.7839999794960022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

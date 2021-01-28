@@ -19,6 +19,6 @@ struct PlanSelectorViewModel {
     let plan: String
     let price: String
     let period: String
-    let equalMonthlyText: String
+    let equalMonthlyText: String?
     let selected: Bool
 }

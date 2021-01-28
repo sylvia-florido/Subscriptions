@@ -113,7 +113,6 @@ class BaseRequester: NSObject {
         }
     }
     
-    
     static func cacheImage(withURL url:URL, completion: @escaping (_ success: Bool)->()) {
         if let _ = cache.object(forKey: url.absoluteString as NSString) {
             print("Image already in cache for url: \(url.absoluteString)")
